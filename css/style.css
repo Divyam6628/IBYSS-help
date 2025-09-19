@@ -67,6 +67,23 @@ a:focus {
   color: #333333;
 }
 
+.site-nav .home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+}
+
+.site-nav .home-link svg {
+  width: 18px;
+  height: 18px;
+  transition: color 0.3s ease;
+}
+
+.site-nav .home-link:hover svg {
+  color: #0059b2;
+}
+
 .donate-button {
   margin-left: 1.5rem;
 }
