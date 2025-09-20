@@ -255,8 +255,9 @@ h2 {
 .impact-graphics {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   justify-content: center;
+  align-items: center; 
 }
 
 /*
