@@ -72,12 +72,17 @@ a:focus {
   align-items: center;
   justify-content: center;
   color: #333333;
+  height: 100%;          
+  padding: 0.25rem 0;
 }
 
 .site-nav .home-link svg {
   width: 18px;
   height: 18px;
-  transition: color 0.3s ease;
+  display: block;        /* removes extra inline spacing */
+  transition: fill 0.3s ease;
+  fill: currentColor;
+  
 }
 
 .site-nav .home-link:hover svg {
