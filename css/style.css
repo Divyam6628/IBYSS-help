@@ -253,28 +253,150 @@ h2 {
 }
 
 .impact-graphics {
+  /* Use a column layout to stack infographics vertically on all
+     devices. Centre the items within the container. */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
-  justify-content: center;
-  align-items: center; 
+  align-items: center;
+  width: 100%;
+
 }
 
 /*
   Impact graphics should maintain their natural aspect ratio and avoid being
-  stretched horizontally. By removing the fixed width and allowing the
-  images to size themselves up to the available space (capped at 100%),
-  they preserve their proportions within the flex container. The
-  border‑radius and shadow remain for a polished look.
+  stretched horizontally. Setting a maximum width prevents extremely wide
+  infographics from filling the entire viewport while still allowing them
+  to scale down on smaller screens. The width property is set to 100%
+  relative to the image's container so that the aspect ratio is preserved.
+  We deliberately omit any flex sizing here to prevent the images from
+  expanding to fill the available flex container space.
 */
 .impact-graphics img {
+  /* Allow the image to scale to the available space while maintaining
+     its aspect ratio. The image will not exceed 420px in width and
+     will shrink on smaller screens. */
+  width: 100%;
   max-width: 420px;
-  width: auto;
   height: auto;
-  flex: 0 1 auto;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   object-fit: contain;
+  display: block;
+}
+
+/*
+  Girls Education page styles
+*/
+.program-overview {
+  background-color: #f7f9fc;
+  padding: 4rem 0;
+}
+.program-overview h2 {
+  color: #0059b2;
+  margin-bottom: 1rem;
+}
+.program-overview p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555555;
+}
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.benefit-item svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  fill: #0059b2;
+  margin-top: 0.2rem;
+}
+.program-highlight {
+  background-color: #0059b2;
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 4rem 0;
+}
+.program-highlight h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.program-highlight p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.program-quote {
+  background-color: #f7f9fc;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.program-quote h2 {
+  color: #0059b2;
+  margin-bottom: 1rem;
+}
+.program-quote blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333333;
+  line-height: 1.6;
+}
+.program-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #0059b2;
+}
+.institutions {
+  padding: 4rem 0;
+}
+.institution-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.institution-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.institution-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0059b2;
+}
+.institution-card p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+}
+.program-gallery {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: block;
 }
 
 /* Donate */
